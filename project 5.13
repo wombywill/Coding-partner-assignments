@@ -1,0 +1,65 @@
+import random
+num_2 = 0
+num_3 = 0
+num_4 = 0
+num_5 = 0
+num_6 = 0
+num_7 = 0
+num_8 = 0
+num_9 = 0
+num_10 = 0
+num_11 = 0
+num_12 = 0
+
+num_rolls = int(input('Enter number of rolls:\n'))
+  
+while num_rolls >= 1:
+    if num_rolls >= 1:
+        for i in range(num_rolls):
+            die1 = random.randint(1,6)
+            die2 = random.randint(1,6)
+            roll_total = die1 + die2
+            print('Roll %d is %d (%d + %d)' % (i, roll_total, die1, die2))
+            
+            #Count number of sixes and sevens
+            
+            if roll_total == 2:
+                num_2 = num_2 + 1
+            if roll_total == 3:
+                num_3 = num_3 + 1
+            if roll_total == 4:
+                num_4 = num_4 + 1
+            if roll_total == 5:
+                num_5 = num_5 + 1
+            if roll_total == 6:
+                num_6 = num_6 + 1
+            if roll_total == 7:
+                num_7 = num_7 + 1
+            if roll_total == 8:
+                num_8 = num_8 + 1
+            if roll_total == 9:
+                num_9 = num_9 + 1
+            if roll_total == 10:
+                num_10 = num_10 + 1
+            if roll_total == 11:
+                num_11 = num_11 + 1
+            if roll_total == 12:
+                num_12 = num_12 + 1
+            
+        print('\nDice roll statistics:')
+        print('2s:', num_2)
+        print('3s:', num_3)
+        print('4s:', num_4)
+        print('5s:', num_5)
+        print('6s:', num_6)
+        print('7s:', num_7)
+        print('8s:', num_8)
+        print('9s:', num_9)
+        print('10s:', num_10)
+        print('11s:', num_11)
+        print('12s:', num_12)
+        num_rolls = int(input('Enter number of rolls:\n'))
+        
+        
+else:
+    print('Goodbye')
