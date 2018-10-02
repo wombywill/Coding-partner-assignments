@@ -1,4 +1,6 @@
 import random
+#random imported for randomization of die
+# list for each occurence of combos = num_?
 num_2 = 0
 num_3 = 0
 num_4 = 0
@@ -12,7 +14,7 @@ num_11 = 0
 num_12 = 0
 
 num_rolls = int(input('Enter number of rolls:\n'))
-  
+#while for repeating branch and asking for num_rolls until not true  
 while num_rolls >= 1:
     if num_rolls >= 1:
         for i in range(num_rolls):
@@ -58,8 +60,9 @@ while num_rolls >= 1:
         print('10s:', num_10)
         print('11s:', num_11)
         print('12s:', num_12)
+        #This repeats request for num_rolls until < 1
         num_rolls = int(input('Enter number of rolls:\n'))
         
-        
+#stops repetition after num_rolls < 1        
 else:
     print('Goodbye')
