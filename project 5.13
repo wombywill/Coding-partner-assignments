@@ -64,5 +64,61 @@ while num_rolls >= 1:
         num_rolls = int(input('Enter number of rolls:\n'))
         
 #stops repetition after num_rolls < 1        
+print('\nDice roll statistics:')
+        ast_str = '*'
+        for i in range(num_2):
+            ast_str += '*'
+        print('2s: ', ast_str)
+        ast_str = ''
+        
+        for i in range(num_3):
+            ast_str += '*'
+        print('3s: ',ast_str)
+        ast_str = ''
+
+        for i in range(num_4):
+            ast_str += '*'
+        print('4s: ', ast_str)
+        ast_str = ''
+
+        for i in range(num_5):
+            ast_str += '*'
+        print('5s: ', ast_str)
+        ast_str = ''
+        
+        for i in range(num_6):
+            ast_str += '*'
+        print('6s: ', ast_str)
+        ast_str = ''
+
+        for i in range(num_7):
+            ast_str += '*'
+        print('7s: ',ast_str)
+        ast_str = ''
+
+        for i in range(num_8):
+            ast_str += '*'
+        print('8s: ',ast_str)
+        ast_str = ''
+
+        for i in range(num_9):
+            ast_str += '*'
+        print('9s: ', ast_str)
+        ast_str = ''
+
+        for i in range(num_10):
+            ast_str += '*'
+        print('10s:', ast_str)
+        ast_str = ''
+
+        for i in range(num_11):
+            ast_str += '*'
+        print('11s:', ast_str)
+        ast_str = ''
+
+        for i in range(num_12):
+            ast_str += '*'
+        print('12s:', ast_str)
+        ast_str = 
 else:
     print('Goodbye')
