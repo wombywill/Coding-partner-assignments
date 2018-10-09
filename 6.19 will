@@ -1,0 +1,101 @@
+def get_num_of_non_WS_characters(usrStr):
+    numWS = 0
+    for i in usrStr.split(' '):
+        numWS += 1
+        numnonWS = len(usrStr) - (numWS - 1)
+    return numnonWS  
+
+
+    
+def get_num_of_words(usrStr):
+    num_words = 0
+    for i in usrStr.split():
+        num_words += 1
+    return num_words
+
+def fix_capitalization(usrStr):
+    caps = 0
+    for i in usrStr.split('. '):
+        caps += 1
+    var3 = '. '.join([i.capitalize() for i in usrStr.split('. ')])
+    my_list = [caps,var3]
+    return my_list
+
+def replace_punctuation(usrStr,exclamationCount,semicolonCount):
+    ex = exclamationCount 
+    semi = semicolonCount
+    
+    var1 = '.'.join([i.replace('!','.') for i in usrStr.split('!')])
+    var2 =','.join([i.replace(';',',') for i in var1.split(';')])
+    my_list = [ex,semi,var2]
+    return my_list
+    
+    
+
+def shorten_spaces(usrStr):
+    var1 = ' '.join([i.replace(' ','') for i in usrStr.split()])
+    return var1
+
+def print_menu(usrStr):
+    print("""MENU
+c - Number of non-whitespace characters
+w - Number of words
+f - Fix capitalization
+r - Replace punctuation
+s - Shorten spaces
+q - Quit""")
+    menuOp = input('\nChoose an option:\n')
+
+    #quit function
+    while menuOp != 'q':
+        #Memu Functions
+        if menuOp == 'c':
+            print('Number of non-whitespace characters: %d\n' % get_num_of_non_WS_characters(usrStr))
+
+        if menuOp == 'w':
+            print('Number of words: %d\n' % get_num_of_words(usrStr))
+            
+        if menuOp == 'f':
+            print('Number of letters capitalized:',fix_capitalization(usrStr)[0])
+            print('Edited text:',fix_capitalization(usrStr)[1])
+            print()
+        if menuOp == 'r':
+            exclamation = -1
+            for i in usrStr.split('!'):
+                exclamation += 1
+            exclamationCount = exclamation
+            semicolon = -1
+            for i in usrStr.split(';'):
+                semicolon += 1
+            semicolonCount = semicolon
+            print('Punctuation replaced')
+            print('exclamationCount:',replace_punctuation(usrStr,exclamationCount,semicolonCount)[0])
+            print('semicolonCount:',replace_punctuation(usrStr,exclamationCount,semicolonCount)[1])
+            print('Edited text:',replace_punctuation(usrStr,exclamationCount,semicolonCount)[2])
+            print()
+        if menuOp == 's':
+            print('Edited text:',shorten_spaces(usrStr))
+            print()
+        
+        #Remember how code works :)
+        
+        print("""MENU
+c - Number of non-whitespace characters
+w - Number of words
+f - Fix capitalization
+r - Replace punctuation
+s - Shorten spaces
+q - Quit\n""")
+        menuOp = input('Choose an option:\n')
+    # Complete print_menu() function
+
+
+
+
+if __name__ == '__main__':
+    #takes user input
+    usrStr = input('Enter a sample text:\n\n')
+
+    #print user input
+    print('You entered: %s\n' % usrStr)
+    print_menu(usrStr)
