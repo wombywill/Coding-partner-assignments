@@ -1,0 +1,13 @@
+names = input('Enter your names:\n')
+names = names.replace(' ','')
+names = names.split(',')
+
+name1 = names[0]
+name2 = names[1]
+name3 = names[2]
+
+initials = []
+initials.append(name1[0])
+initials.append(name2[0])
+initials.append(name3[0])
+print('.'.join(initials))
