@@ -1,0 +1,14 @@
+alph = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p',\
+            'q','r','s','t','u','v','w','x','y','z']
+num =[2,2,2,3,3,3,4,4,4,5,5,5,6,6,6,7,7,7,7,8,8,8,9,9,9,9]
+
+phone = input('Enter phone number:\n')
+phone = phone.lower()
+
+s = ""
+for index in range(len(phone)):
+    if phone[index].isalpha():
+        s = s + str(num[alph.index(phone[index])])
+    else:
+        s = s + phone[index]
+print(s)
