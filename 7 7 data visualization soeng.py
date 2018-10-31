@@ -29,18 +29,18 @@ def table(title, header1, header2, nameList, numberList):
      
      print("%33s" %(title))
      
-     print("%-20s %-10s %-23s" %(header1, "|", header2))
+     print("%-19s %-9s %-22s" %(header1, "|", header2))
      print("--------------------------------------------")
      
      for i in range(0, len( nameList)):
-          print("%-20s %-10s %-23d " %(nameList[i], "|", numberList[i]))
+          print("%-19s %-9s %-22d " %(nameList[i], "|", numberList[i]))
      print("\n")
 
 
 def histogram( nameList, numberList):
      
      for i in range(0, len( nameList)):
-          print("\n %20s %-5s " %( nameList[i], " "), end = "")
+          print("\n %20s %0s " %( nameList[i], " "), end = "")
           for j in range(0, numberList[i]):
                print("*", end="")
      print("\n")
