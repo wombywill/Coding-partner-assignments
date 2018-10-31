@@ -27,10 +27,10 @@ def checkCommas(dataPoint):
 
 def table(title, header1, header2, nameList, numberList):
      
-     print("\n\n %33s \n" %(title))
+     print("%33s" %(title))
      
-     print("\n %-20s %-10s %-23s \n" %(header1, "|", header2))
-     print("----------------------------------------------------")
+     print("%-20s %-10s %-23s" %(header1, "|", header2))
+     print("--------------------------------------------")
      
      for i in range(0, len( nameList)):
           print("%-20s %-10s %-23d " %(nameList[i], "|", numberList[i]))
