@@ -1,0 +1,41 @@
+title = input('Enter a title for the data:\n')
+print('You entered:',title)
+print()
+column1 = input('Enter the column 1 header:\n')
+print('You entered:', column1)
+print()
+column2 = input('Enter the column 2 header:\n')
+print('You entered:', column2)
+print()
+data = input(str('Enter a data point (-1 to stop input):\n'))
+while data != '-1':
+    def hasNumbers(data):
+        return any(char.isdigit() for char in data)
+    if ',' not in data:
+        print('Error: No comma in string.')
+        print()
+    elif data.count(',') > 1:
+        print('Error: Too many commas in input.')
+        print()
+    
+    
+    elif hasNumbers(data) == False:
+        print('Error: Comma not followed by an integer.')
+        print()
+        
+    
+    else:    
+        data = data.split(',')
+        column1data = str(data[0])
+        data_str = []
+        data_str.append(column1data)
+        column2data = int(data[1]) 
+        data_int = []
+        data_int.append(column2data)
+        print('Data string:', ' '.join(data_str))
+        for i in data_int:    
+            print('Data integer:',i, end = '\n')
+        print()
+        
+    data = input(str('Enter a data point (-1 to stop input):\n'))
+    
