@@ -1,0 +1,69 @@
+#4
+dictionary = {
+    'John': {'name': 'John Smith', 'phone': '123-555-0101'}, 
+    'Jose': {'name': 'Jose Garcia', 'phone': '123-555-0102'}
+}
+
+print("John's name:", dictionary['John']['name'])
+print("Jose's phone:",dictionary['Jose']['phone'])
+print()
+
+dictionary = {
+    'cat': 'Frisky',
+    'dog': 'Spot',
+    'fish': 'Bubbles',
+}
+
+for key in dictionary:
+    print("dictionary[%s]: %s" % (key, dictionary[key]))
+print()
+dictionary = {
+    'cat': 'Frisky',
+    'dog': 'Spot',
+    'fish': 'Bubbles',
+}
+
+for key in sorted(dictionary.keys()):
+    print("dictionary[%s]: %s" % (key, dictionary[key]))
+#2
+height1 = float(input('Enter height 1:\n'))
+height2 = float(input('Enter height 2:\n'))
+height3 = float(input('Enter height 3:\n')) 
+height4 = float(input('Enter height 4:\n'))
+
+height_list = [height1,height2,height3,height4]
+print('heights:',height_list)
+
+print()
+average = sum(height_list) / 4
+print('Average height: %.2f' % average)
+
+sorted_height = sorted(height_list)
+max_height = sorted_height[-1]
+print('Max height: %.2f' % max_height)
+
+print()
+index = int(input('Enter a list index (1 - 4):\n'))
+cm = height_list[index-1]
+inch = cm * 2.54
+print('Height in pounds: %.2f' % cm)
+print('Height in kilograms: %.2f' % inch)
+
+#3
+codes = {'A':'%', 'a':'9', 'B':'@', 'b':'#', 'C':'1', 'c':'2', 'D':'3', 'd':'4', \
+'E':'5', 'e':'6', 'F':'7', 'f':'8', 'G':'0', 'g':'}', 'H':'{', 'h':']', 'I':'[', 'i':',', \
+         'J':'.', 'j':'>', 'K':'<', 'k':'/', 'L':'0', 'l':'\-', 'M':'\"', 'm':':', 'N':';', \
+         'n':'+', 'O':'$', 'o':'-', 'Q':'$', 'q':'%', 'R':'^', 'r':'&', 'S':'*', \
+         's':'(','T':')', 't':'~', 'U':'`', 'u':'5', 'V':'\\', 'v':'+', 'W':'=', 'w':'7', \
+         'X':'~', 'x':')', 'Y':'2', 'y':'*', 'Z':']', 'z':'8','?':' '}
+
+string = input('Enter a string:')
+
+string1 = string.replace(' ','?')
+string1.split()
+string_list = []
+for i in string1:
+    print(codes[i], end ='')
+print()
+print(string)
+      
