@@ -59,6 +59,29 @@ enigma={'A' : '@', 'a' : '&', 'B': '%', 'b': '6', 'C' : '0', 'c' : '^', 'D' : '-
         'Y' : 'Ⓨ', 'y' : '¥', 'Z' : 'Ž', 'z' : '※'}
 #need to input a sentence, encrypt, then decrypt
 #would be more elegant with a menu?
+while True:
+   print('Menu')
+   print('e - Encrypt a Sentence')
+   print('d - Decrypt a Sentence')
+   print('q - Quit')
+
+   option = input('\n Choose an option: \n')
+   
+   if option == 'q':
+       exit()
+
+   elif option == 'e':
+       print()
+       print('Enter a sentence to encrypt: \n')
+       #need function to encrypt
+          print(#print)
+
+   elif option == 'd':
+       print()
+       print('Enter a sentence to decrypt: \n')
+       #need function to decrypt
+          print(#result)
+
 
 
 #4
