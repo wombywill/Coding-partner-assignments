@@ -1,0 +1,31 @@
+class ItemToPurchase:
+    
+    def __init__(self, item_name = "none", item_price = 0, item_quantity = 0):
+        self.item_name = item_name
+        self.item_price = item_price
+        self.item_quantity = item_quantity
+    
+    
+    
+if __name__ == "__main__":
+    # Type main section of code here
+    print('Item 1')
+    item1name = input('Enter the item name:\n')
+    item1price = int(input('Enter the item price:\n'))
+    item1quantity = int(input('Enter the item quantity:\n'))
+    print()
+    print('Item 2')
+    item2name = input('Enter the item name:\n')
+    item2price = int(input('Enter the item price:\n'))
+    item2quantity = int(input('Enter the item quantity:\n'))
+    total1 = item1price * item1quantity
+    total2 = item2price * item2quantity
+    real_total = total1 + total2
+    print()
+    print('TOTAL COST')
+    print('%s %d @ $%d = $%d' % (item1name, item1quantity, item1price, total1))
+    print('%s %d @ $%d = $%d' % (item2name, item2quantity, item2price, total2))
+    print()
+    print('Total: $%d' % real_total)
+    
+    
