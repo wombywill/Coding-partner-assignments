@@ -1,0 +1,60 @@
+class ItemToPurchase:
+    
+    def __init__(self, item_name = "none", item_price = 0, item_quantity = 0, item_description = "none"):
+        self.item_name = item_name
+        self.item_price = item_price
+        self.item_quantity = item_quantity
+        self.item_description = item_description
+    def print_item_description():
+        print('%s: %s, %d' % (item_name, item_description, item_quantity))
+class ShoppingCart:
+    
+    def __init__(self, customer_name = "none", current_date = "January 1,2016", cart_items = []):
+        self.customer_name = customer_name
+        self.current_date = current_date
+        self.cart_items = cart_items
+    
+    def add_item(self,ItemToPurchase):
+        if item_name != 'z':
+            self.cart_items.append(item_name)
+
+    def remove_item(self, ItemToPurchase):
+        if item_quantity >= self.items[item_name] and item_quantity >= 1:
+            items_cost = item_price * self.items[item_name]
+            self.total -= items_cost
+            del self.items[item_name]
+        else:
+            self.total -= item_quantity * item_price
+            self.items[item_name] -= item_quantity
+
+def print_menu(ShoppingCart):
+    print("""MENU
+a - Add item to cart
+r - Remove item from cart
+c - Change item quantity
+i - Output items' descriptions
+o - Output shopping cart
+q - Quit""")
+
+user_op = ('Choose an option:')
+
+type1 = ItemToPurchase()
+type2 = ShoppingCart(type1)
+        
+    
+
+    
+if __name__ == "__main__":
+    # Type main section of code here
+  
+    
+    customer_name = input('Enter customer\'s name:\n')
+    today_date = input('Enter today\'s date:\n')
+    print()
+    print('Customer name: %s' % customer_name)
+    print('Today\'s date: %s' % today_date)
+    
+    while user_op != 'q':
+        user_op = ('Choose an option:')
+
+        
